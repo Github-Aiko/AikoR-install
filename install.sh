@@ -97,7 +97,7 @@ check_status() {
 }
 
 install_acme() {
-    curl https://raw.githubusercontent.com/Github-Aiko/AikoR-Install/master/file/acme.sh | sh
+    curl https://raw.githubusercontent.com/AikoCute-Offical/AikoR-Install/master/file/acme.sh | sh
 }
 
 install_AikoR() {
