@@ -97,7 +97,7 @@ check_status() {
 }
 
 install_acme() {
-    curl https://raw.githubusercontent.com/AikoCute-Offical/AikoR-Install/master/file/acme.sh | sh
+    curl https://raw.githubusercontent.com/Github-Aiko/AikoR-Install/master/file/acme.sh | sh
 }
 
 install_AikoR() {
@@ -109,20 +109,20 @@ install_AikoR() {
 	cd /usr/local/AikoR/
     
     if  [ $# == 0 ] ;then
-        last_version=$(curl -Ls "https://api.github.com/repos/AikoCute-Offical/AikoR/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+        last_version=$(curl -Ls "https://api.github.com/repos/Github-Aiko/AikoR/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
         if [[ ! -n "$last_version" ]]; then
             echo -e "${red}AikoR version detection failed, maybe GIthub API limit exceeded, please try again later or specify AikoR version setting manually${plain}"
             exit 1
         fi
         echo -e "The latest version of AikoR has been detected：${last_version}，Start the installation"
-        wget -N --no-check-certificate -O /usr/local/AikoR/AikoR-linux.zip https://github.com/AikoCute-Offical/AikoR/releases/download/${last_version}/AikoR-linux-${arch}.zip
+        wget -N --no-check-certificate -O /usr/local/AikoR/AikoR-linux.zip https://github.com/Github-Aiko/AikoR/releases/download/${last_version}/AikoR-linux-${arch}.zip
         if [[ $? -ne 0 ]]; then
             echo -e "${red}AikoR download failed, make sure your server can download Github files${plain}"
             exit 1
         fi
     else
         last_version=$1
-        url="https://github.com/AikoCute-Offical/AikoR/releases/download/${last_version}/AikoR-linux-${arch}.zip"
+        url="https://github.com/Github-Aiko/AikoR/releases/download/${last_version}/AikoR-linux-${arch}.zip"
         echo -e "AikoR starts up v$1"
         wget -N --no-check-certificate -O /usr/local/AikoR/AikoR-linux.zip ${url}
         if [[ $? -ne 0 ]]; then
@@ -149,7 +149,7 @@ install_AikoR() {
     if [[ ! -f /etc/AikoR/aiko.yml ]]; then
         cp aiko.yml /etc/AikoR/
         echo -e ""
-        echo -e "New installation, please refer to previous tutorial：https://github.com/AikoCute-Offical/AikoR，Configure required content"
+        echo -e "New installation, please refer to previous tutorial：https://github.com/Github-Aiko/AikoR，Configure required content"
     else
         systemctl start AikoR
         sleep 2
@@ -158,7 +158,7 @@ install_AikoR() {
         if [[ $? == 0 ]]; then
             echo -e "${green}AikoR reboot successfully${plain}"
         else
-            echo -e "${red}AikoR May not start, please use the following AikoR log Check the log information, if it fails to start, the configuration format may have been changed, please go to the wiki to check：https://github.com/AikoCute-Offical/AikoR${plain}"
+            echo -e "${red}AikoR May not start, please use the following AikoR log Check the log information, if it fails to start, the configuration format may have been changed, please go to the wiki to check：https://github.com/Github-Aiko/AikoR${plain}"
         fi
     fi
 

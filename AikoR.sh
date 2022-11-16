@@ -373,7 +373,7 @@ show_usage() {
 show_menu() {
     echo -e "
   ${green}AikoR Các tập lệnh quản lý phụ trợ，${plain}${red}không hoạt động với docker${plain}
---- https://github.com/AikoCute-Offical/AikoR ---
+--- https://github.com/Github-Aiko/AikoR ---
   ${green}0.${plain} Setting Config
 ————————————————
   ${green}1.${plain} Install AikoR
