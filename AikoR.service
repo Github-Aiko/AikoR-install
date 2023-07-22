@@ -14,7 +14,7 @@ LimitNOFILE=infinity
 LimitNPROC=10000
 LimitNOFILE=1000000
 WorkingDirectory=/usr/local/AikoR/
-ExecStart=/usr/local/AikoR/AikoR -config /etc/AikoR/aiko.yml
+ExecStart=/usr/local/AikoR/AikoR server
 Restart=on-failure
 RestartSec=10
 Environment="XRAY_VMESS_AEAD_FORCED=false"
