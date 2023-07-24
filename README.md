@@ -19,7 +19,7 @@ Run the link and follow the instructions
 
 1 : Run the link with wget (If not installed, install it)
 ```
-    wget --no-check-certificate -O AikoR.sh https://raw.githubusercontent.com/Github-Aiko/AikoR-install/master/AikoR.sh && bash AikoR.sh
+wget --no-check-certificate -O AikoR.sh https://raw.githubusercontent.com/Github-Aiko/AikoR-install/master/AikoR.sh && bash AikoR.sh
 ```
 
 
