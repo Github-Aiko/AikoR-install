@@ -110,14 +110,14 @@ install_AikoR() {
             exit 1
         fi
         echo -e "Detected the latest version of AikoR: ${last_version}, starting installation"
-        wget -q -N --no-check-certificate -O /usr/local/AikoR/AikoR-linux.zip https://github.com/Github-Aiko/AikoCute-Offical/releases/download/${last_version}/AikoR-linux-${arch}.zip
+        wget -q -N --no-check-certificate -O /usr/local/AikoR/AikoR-linux.zip https://github.com/Github-Aiko/AikoCute-Offical/AikoR/releases/download/${last_version}/AikoR-linux-${arch}.zip
         if [[ $? -ne 0 ]]; then
             echo -e "${red}Failed to download AikoR. Please make sure your server can download files from Github.${plain}"
             exit 1
         fi
     else
         last_version=$1
-        url="https://github.com/Github-Aiko/AikoCute-Offical/releases/download/${last_version}/AikoR-linux-${arch}.zip"
+        url="https://github.com/Github-Aiko/AikoCute-Offical/AikoR/releases/download/${last_version}/AikoR-linux-${arch}.zip"
         echo -e "Starting installation of AikoR v$1"
         wget -q -N --no-check-certificate -O /usr/local/AikoR/AikoR-linux.zip ${url}
         if [[ $? -ne 0 ]]; then
